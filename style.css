@@ -1,0 +1,161 @@
+/* Universal Styling */
+:root {
+  --red : hsl(0, 78%, 62%);
+  --cyan : hsl(180, 62%, 55%);
+  --orange : hsl(34, 97%, 64%);
+  --blue : hsl(212, 86%, 64%);
+  --dark-blue : hsl(234, 12%, 34%);
+  --gray-blue : hsl(229, 6%, 66%);
+  --light-blue : hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  padding:2% 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--light-blue);
+}
+
+
+/* Fontstyle */
+h1, h2 {
+  margin: 1rem 0;
+  color: var(--dark-blue);
+}
+
+.heading {
+  font-size: 2.25rem;
+}
+
+.header-text, .card-text {
+  color: var(--gray-blue);
+}
+
+.header-text {
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 13px;
+}
+
+.font-light {
+  font-weight: 200;
+  letter-spacing: 0.25px;
+}
+
+/* Card Background Color */
+.blue {
+  background-color: var(--blue);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.cyan {
+  background-color: var(--cyan);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+
+/* Page Header */
+.wrapper {
+  width: 100%;
+  padding: 0 6%;
+}
+
+.introduction {
+  margin-bottom: 1rem;
+  padding: 0 30%;
+  text-align: center;
+}
+
+/* Main Section */
+.features {
+  width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.outer-column {
+  align-self: center;
+}
+
+.inner-grid {
+  display: grid;
+  justify-self: center;
+  grid-gap: 30px;
+}
+
+.card {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -12px var(--gray-blue);
+}
+
+.card-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-cap {
+  height:5px;
+  overflow: hidden;
+}
+
+.card-header, .image-container {
+  padding: 0 2rem;
+}
+
+.features-logo {
+  float: right;
+}
+
+@media only screen and (max-width:1300px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .wrapper, .introduction {
+    padding: 2%;
+  }
+
+  .features {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .introduction {
+    margin: 3rem 0;
+  }
+
+  .card-header, .image-container {
+    padding: 0 1rem;
+  }
+}
